@@ -6,6 +6,13 @@ function main(){
       throw new Error('WebGL not supported');
   }
 
+  canvas.addEventListener("mousedown",mouseDown,false);
+
+  function mouseDown(event){
+    console.log(event.screenX);
+    console.log(event.screenY);
+  }
+
   var vertexShaderSource = document.querySelector("#vertex-shader-2d").text;
   var fragmentShaderSource = document.querySelector("#fragment-shader-2d").text;
   
